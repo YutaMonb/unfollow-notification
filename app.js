@@ -39,8 +39,8 @@ async function getFollower(par) {
 
 async function checkRemove() {
     try {
-        let previous = JSON.parse(fs.readFileSync('./json/previous.json', 'utf-8'));
-        let latest = JSON.parse(fs.readFileSync('./json/latest.json', 'utf-8'));
+        var previous = JSON.parse(fs.readFileSync('./json/previous.json', 'utf-8'));
+        var latest = JSON.parse(fs.readFileSync('./json/latest.json', 'utf-8'));
     } catch (error) {
         console.trace('差分データが無いため終了します。　再度実行してください。');
         process.exit(0);
